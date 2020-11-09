@@ -1,12 +1,12 @@
 Question 4
-
--- From the terminal;  depending on setting access mysql shell, 
--- CREATE DATABASE IF NOT EXISTS education; 
+a):
+-- From the terminal;  depending on setting access mysql shell, then 
+CREATE DATABASE IF NOT EXISTS education; 
 -- "GRANT ALL ON *education* TO 'user_name'@'localhost' IDENTIFIED BY 'password';"
 -- "FLUSH PRIVILEGES;"
 -- and hence connect to the database.
 
-a):
+
 CREATE TABLE institution(
 	institution_id INT(11) PRIMARY KEY,
     name VARCHAR(250)
@@ -24,7 +24,8 @@ CREATE TABLE student(
     FOREIGN KEY (course) REFERENCES course(course_id) ON DELETE CASCADE
 );
 
--- populate the education database.
+-- populating the education database for testing purposes.
+
 -- institution table 
 INSERT INTO institution VALUES(444556, 'University College Dublin');
 INSERT INTO institution VALUES(556655, 'University College London');
@@ -32,7 +33,7 @@ INSERT INTO institution VALUES(556655, 'University College London');
 INSERT INTO course VALUES(303, 'Bsc. Actuarial Science', 444556);
 INSERT INTO course VALUES(505, 'MPhil Genomics', 556655);
 
--- student table
+-- student tableed
 INSERT INTO student VALUES(1, 'Ken Wamuya Elignton', 303);
 INSERT INTO student(name, course) VALUES('MPhil Genomics', 505); 
 
