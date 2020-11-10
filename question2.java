@@ -17,7 +17,6 @@ public class Main {
                 stringArray[right] = reversedString;
                 left +=1;
                 right -=1;
-
             }
 
         }
